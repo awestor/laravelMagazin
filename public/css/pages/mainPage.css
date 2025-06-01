@@ -1,0 +1,124 @@
+.content{
+    min-width: 800px;
+    width:100%;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#rootCategories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.root-category, .parent-category {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.root-category:hover, .parent-category:hover {
+    background-color: #0056b3;
+}
+
+#parentCategories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.categories {
+    justify-content: center;
+    background-color: #f0f0f0; /* Светло-серый фон */
+    padding: 15px;
+}
+
+.categories a {
+    font-size: 22px; /* Увеличенный размер шрифта */
+    margin-top: 12px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+
+.categories-list {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 10px; /* Отступ между элементами */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.categories-list li {
+    position: relative;
+    min-width: 200px;
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Чёрный текст */
+    border: 1px solid #d3d3d3; /* Светло-серая граница */
+    padding: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    .categories-list li {
+        grid-column: span 2; /* Каждый блок занимает 2 колонки */
+    }
+    .categories-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* Фиксируем 2 колонки */
+        grid-template-rows: auto auto; /* Фиксируем 2 строки */
+        padding-bottom: 0px;
+    }
+    .categories-list li:nth-last-child(1):nth-child(2n + 1):not(:nth-child(3n)) {
+        grid-column: span 6;
+    }
+
+    .categories-list li:nth-last-child(2):nth-child(3n + 1) {
+        grid-column: span 3;
+    }
+    
+    .categories-list li:nth-last-child(1):nth-child(3n + 2) {
+        grid-column: span 3;
+    }
+    
+}
+.categories-list::-webkit-scrollbar {
+    height: 8px;
+    background: #f0f0f0; /* Серый фон */
+    border-radius: 4px;
+  }
+  
+  .categories-list::-webkit-scrollbar-thumb {
+    background: #555; /* Чёрный ползунок */
+    border-radius: 4px;
+  }
+  
+  .categories-list::-webkit-scrollbar-thumb:hover {
+    background: #333; /* Темнее при наведении */
+  }
+
+

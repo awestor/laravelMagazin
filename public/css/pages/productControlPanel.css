@@ -1,0 +1,110 @@
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+    color: #000;
+}
+
+.content h2, .content h3 {
+    color: #111;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.content th, .content td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #000;
+}
+
+.content th {
+    background: #ddd;
+    font-weight: bold;
+}
+
+.content tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+.content tr:hover {
+    background: #e6e6e6;
+}
+
+.content .btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.content .btn-warning {
+    width: 100px;
+    background: #e79b0e;
+    color: #fff;
+}
+
+.content .btn-warning:hover {
+    background: #444;
+}
+
+.content .btn-danger {
+    width: 140px;
+    background: #e74c3c;
+    color: #fff;
+}
+
+.content .btn-danger:hover {
+    background: #333;
+}
+
+.content .no-data {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+    margin-top: 20px;
+}
+
+.content .btn-add {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #2ecc71; /* ✅ Зелёный цвет для добавления */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.content .btn-add:hover {
+    background: #27ae60;
+    transform: scale(1.05); /* ✅ Лёгкое увеличение при наведении */
+}
+
+.content .btn-add:active {
+    background: #1e8449;
+    transform: scale(1); /* ✅ Сброс при нажатии */
+}
